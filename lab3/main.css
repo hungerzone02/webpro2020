@@ -1,0 +1,19 @@
+h1,
+h2 {
+    color: rgb(113, 166, 106);
+}
+
+h3 {
+    color: rgb(38, 106, 244);
+    border-bottom: 2px solid #cccccc;
+    width: 600px;
+    padding-bottom: 3px;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    padding-left: 10px;
+}
