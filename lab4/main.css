@@ -1,0 +1,109 @@
+.featured-image h3 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    background-color: #333333;
+    color: white;
+    padding: 5px 0 5px 15px;
+    text-transform: uppercase;
+    width: 705px;
+    display: block;
+}
+
+.home img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.home h2 {
+    color: rgb(128, 172, 166);
+    text-align: center;
+}
+
+.home {
+    border: gray solid 1px;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+.home-pic img {
+    background-color: rgb(218, 52, 118);
+}
+
+.logo-magic-cake {
+    text-align: center;
+    color: white;
+    background-color: rgb(218, 52, 118);
+    margin-top: auto;
+    text-decoration: none;
+}
+.logo-magic-cake a {
+    text-decoration: none;
+    color: white;
+}
+
+.magic-cake h2 {
+    color: rgb(128, 172, 166);
+    text-align: center;
+}
+
+.magic-cake {
+    border: 1px solid;
+    color: #333333;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: white;
+}
+
+.soso {
+    background-image: url(images/background.jpg);
+}
+
+.recipes {
+    text-align: center;
+    color: white;
+    background-color: rgb(218, 52, 118);
+    margin-top: auto;
+}
+
+.recipes a{
+    text-decoration: none;
+    color: white;
+}
+
+.text ul {
+    border: 1px solid red;
+    padding-left: 0%;
+}
+
+.text img {
+    float: left;
+    margin-right: 10px;
+}
+
+.form input[type=text] {
+    width: 500px;
+    height: 50;
+    padding: 7px;
+    border: 2px solid #7facaa;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+.form textarea{
+    width: 500px;
+height: 400px;
+padding: 7px;
+border: 2px solid #7facaa;
+margin-bottom: 25px;
+font-size: 24px;
+}
+
+.form h1 {
+    color: rgb(128, 172, 166);
+}
+
+.checkbox p{
+    display: inline;
+    margin-right: 300px;
+}
