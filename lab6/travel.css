@@ -1,0 +1,27 @@
+.travel h1 {
+    color: rgb(41, 128, 185);
+    margin-left: 10%;
+}
+
+.travel input[type="text"] {
+    border: rgb(41, 128, 185) solid 2px;
+    width: 90px;
+}
+
+.travel select {
+    border: rgb(41, 128, 185) solid 2px;
+}
+
+.travel input[type="submit"] {
+    width: 200px;
+    margin-top: 5px;
+    margin-left: 60px;
+}
+
+.travelPHP h1{
+    color: rgb(41, 128, 185);
+}
+
+.travelPHP p{
+    color: red;
+}

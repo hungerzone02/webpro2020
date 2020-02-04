@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="softwareOrder.css">
+</head>
+
+<body>
+    <h1>Save The World: Order Form</h1>
+    <p>To order SaveTheWorld, please complete the folling order form:</p>
+    <form action="softwareOrder.php">
+        <div class="system">
+            <label for="system">Choose your operating system:</label>
+            <select name="system">
+                <option value="Linux">Linux</option>
+                <option value="Macintosh">Macintosh</option>
+                <option value="Windows">Windows</option>
+            </select>
+        </div>
+        <div class="coppies">
+            <label for="coppies">Number of copies:</label>
+            <input type="text" name="coppies">
+        </div>
+        <input type="submit" value="Submit Your Order">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+
+</html>
