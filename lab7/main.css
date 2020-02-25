@@ -1,0 +1,16 @@
+td {
+    padding: 2px 10px;
+    text-align: left;
+}
+
+input {
+    width: 150px;
+}
+
+input[type="submit"]
+{
+    margin-left: 60px;
+}
+input[type="submit"],input[type="reset"]{
+    width: 60px;
+}
