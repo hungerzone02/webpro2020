@@ -4,7 +4,6 @@ require_once "config.php";
 $nations = $_GET['nations'];
 $traveler = $_GET['traveler'];
 $nights = $_GET['nights'];
-var_dump($nations,$traveler,$nights);
 if($nations == "Barcelona")
 {
     $airFare = 875;
@@ -30,17 +29,14 @@ else if($nations == "Tokyo")
     $airFare = 1575;
     $cost = 240;
 }
-if($nations == "Tokyo" && $traveler >=5)
+if($nations == "Tokyo" && $nights >=5)
 {
     $airFare -= 200;
 }
-$HotelPrice = $airFare*$nights;
-$TicketPrice = $cost*$nights*$traveler;
+$HotelPrice = $airFare*$traveler;
+$TicketPrice = $cost*$nights;
 $total = $HotelPrice + $TicketPrice;
-function findTotal($sumAirFare,$sumCost)
-{
-    return $sumAirFare+$sumCost;
-}
+
 $userQuery = "INSERT INTO travel(Destination,NumberOfNights,NumberOfPeople,HotelPrice,TicketPrice,TotalPrice) 
 VALUES('$nations',$nights,$traveler,$HotelPrice,$TicketPrice,$total)";
 $result = mysqli_query($connect,$userQuery);
