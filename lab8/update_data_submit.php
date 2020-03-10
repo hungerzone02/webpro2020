@@ -16,7 +16,7 @@ $userQuery = "UPDATE travel SET Destination = '$Destination',
                                 HotelPrice = '$HotelPrice',
                                 TicketPrice = '$TicketPrice',
                                 TotalPrice = '$TotalPrice'
-                        WHERE travel_id = '$travel_id'";
+                        WHERE travel_id = '$travel_id '";
 
 $result = mysqli_query($connect,$userQuery);
 
