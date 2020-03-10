@@ -1,0 +1,23 @@
+{# extend main layout #}
+{% extends "layout.html" %}
+{# override title block #}
+{% block title %}Product View{% endblock %}
+{# override header block and use contents from title block #}
+{% block header %}
+<h1>{{ block('title') }}</h1>
+{% endblock %}
+{# product-view: page 1/2 #}
+
+{# override content block #}
+{% block content %}
+{% if data is empty %}
+<p>Product not found!!!</p>
+{% else %}
+<p>
+Name: {{ data.name }}<br />
+Price: {{ data.price|number_format(2) }}<br />
+</p>
+<a href="{{ url_for('product-list') }}">Back</a>
+{% endif %}
+{% endblock %}
+{# product-view: page 2/2 #}

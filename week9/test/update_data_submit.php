@@ -5,8 +5,8 @@ $fac_ID = $_GET['id']; //get $id from an update link
 $fac_name =$_POST['fac_name'];
 if($_SESSION['level'] == 2)
 {
-$userQuery = “……………………………………………………………….";
-$result = mysqli_query(…………………………………………………..);
+$userQuery = "UPDATE test SET fac_name = '$fac_name'";
+$result = mysqli_query($connect,$userQuery);
 if (!$result)
 {
 die ("Could not successfully run the query $userQuery".mysqli_error($connect));
