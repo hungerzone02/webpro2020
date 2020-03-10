@@ -21,14 +21,18 @@ require_once "config.php";
         die ("Could not successfully run the query $userQuery".mysqli_error($connect));
     }
     ?>
+    <?php if($_SESSION['level'] > 1) { ?>
         <a href="#">Create new employee</a><br><br>
+       <?php } ?>
     <table border="1">
         <tr>
             <th>ID</th>
             <th>Firstname</th>
             <th>Lastname</th>
+            <?php if(!$_SESSION['level'] == 1 && !$_SESSION['level'] == 4) { ?>
             <th>Salary</th>
-            <?php if($_SESSION['level'] >1)
+            <?php } ?>
+            <?php if($_SESSION['level'] >2)
             {?>
             <th>Action</th>
             <?php
@@ -43,8 +47,10 @@ require_once "config.php";
                 echo "    <td>".$row['employee_id']."</td>";
                 echo "    <td>".$row['firstname']."</td>";
                 echo "    <td>".$row['lastname']."</td>";
+                if(!$_SESSION['level'] == 1 && !$_SESSION['level'] == 4) {
                 echo "    <td>".$row['salary']."</td>";
-                if ($_SESSION['level']>1) {
+            }
+                if ($_SESSION['level']>2) {
                 echo "    <td><a href='#'>Edit</a>&nbsp;&nbsp;<a href='#'>Delete</a></td>";
                 echo "</tr>";
                 }
