@@ -29,7 +29,7 @@ require_once "config.php";
             <th>ID</th>
             <th>Firstname</th>
             <th>Lastname</th>
-            <?php if(!$_SESSION['level'] == 1 && !$_SESSION['level'] == 4) { ?>
+            <?php if($_SESSION['level'] != 1 && $_SESSION['level'] != 4) { ?>
             <th>Salary</th>
             <?php } ?>
             <?php if($_SESSION['level'] >2)
@@ -47,7 +47,7 @@ require_once "config.php";
                 echo "    <td>".$row['employee_id']."</td>";
                 echo "    <td>".$row['firstname']."</td>";
                 echo "    <td>".$row['lastname']."</td>";
-                if(!$_SESSION['level'] == 1 && !$_SESSION['level'] == 4) {
+                if($_SESSION['level'] != 1 && $_SESSION['level'] != 4) {
                 echo "    <td>".$row['salary']."</td>";
             }
                 if ($_SESSION['level']>2) {
