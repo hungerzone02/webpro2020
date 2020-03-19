@@ -1,0 +1,86 @@
+html, body, h1, h2,
+h3, p, ol, ul, li, a {
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
+body {
+	padding: 0 0 0 0;
+}
+a {
+	text-decoration: none;
+}
+h1 {
+	color: #ffffff;
+	margin: 0 0 15px 0;
+	text-align: center;
+}
+h2 {
+	margin: 20px 0 20px 0;
+	text-align: center;
+	color: #7facaa;
+}
+h3 {
+	margin: 15px 0 15px 0;
+	padding-bottom: 3px;
+}
+ul {
+	padding: 0 0 0 50px;
+}
+ol {
+	padding: 0 0 0 50px;
+}
+
+.nav {
+	padding-left: 0;
+	margin: 15px 0 20px 0;
+	text-align: center;
+}
+.nav a {
+	color: #0000af;
+	text-decoration: none;
+}
+.nav li {
+	display: inline;
+}
+.header {
+	padding: 10px 10px 10px 10px;
+	background-color: #b56663;
+}
+.header a {
+	color: #ffffff;
+}
+.main-content {
+	width: 800px;
+	padding: 20px 20px 20px 20px;
+	border: 1px solid #dddddd;
+	margin: 30px auto 0 auto;
+}
+.logo img {
+	margin-left: 14px;
+	margin-top: 15px;
+	width: 100%;
+	border-radius: 5px;
+}
+.error {
+	color: #ee4d2d;
+	font-weight: bold;
+	text-align: center;
+}
+.footer {
+	font-size: 14px;
+	margin: 10px 0 10px 0;
+	text-align: center;
+}
+.login-frm {
+	width: 300px;
+	margin: 50px auto 0 auto;
+}
+.login-btn {
+	width: 120px;
+	margin: 20px auto 20px auto;
+}
+.user-desc {
+	color: deepskyblue;
+	text-align: right;
+}

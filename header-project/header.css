@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap');
+
+.header {
+    text-align: center;
+    background-color: #6aa19c;
+    color: white;
+    font-family: Baloo Chettan;
+}

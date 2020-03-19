@@ -1,0 +1,24 @@
+
+div{
+    padding-bottom: 20px;
+}
+
+b {
+    font-weight: bolder;
+    color: blue;
+    font-size: large;
+}
+
+input[type=text] {
+    width: 250px;
+}
+input[type=submit] {
+    background-color: blue;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    padding: 7px 5px;
+    border-radius: 5px;
+    margin-left: 100px;
+}
+

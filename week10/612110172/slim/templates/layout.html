@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
 {% block head %}
-<meta charset="UTF-8" />
-<title>{% block title %}{% endblock %}</title>
-<link rel="stylesheet" type="text/css"
-href="{{ base_path() }}/css/app.css" />
+    <meta charset="UTF-8" />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css"
+      href="{{ base_path() }}/css/app.css" />
 {% endblock %}
-</head>
-<body>
-<div id="header">
+  </head>
+  <body>
+    <div id="header">
 <!-- START: header -->
 {% block header %}{% endblock %}
 <!-- END: header -->
-</div>
-<div id="content">
+    </div>
+    <div id="content">
 <!-- START: content -->
 {% block content %}{% endblock %}
 <!-- END: content -->
-</div>
+    </div>
 </body>
 </html>
