@@ -1,0 +1,5 @@
+{
+    "require": {
+        "middlewares/aura-session": "^1.1"
+    }
+}

@@ -1,1 +1,27 @@
-<h1>Update</h1>
+{% block stylesheets %}
+	<link type="text/css" rel="stylesheet" href="http://localhost/webpro2020/week10/612110172/slim/public/css/product-update.css">
+{% endblock %}
+<h1>Product Form : Update</h1>
+<div>
+	<tr>Name:</tr><br>
+	<tr><input type="text" name="name" value="{{ data.name }}"></tr>
+</div>
+<div>
+	<tr>Categopry:</tr><br>
+	<tr>
+		<select>
+                        <option selected disabled hidden>{{ data.category }}</option>
+			<option value="phone">Phone</option>
+			<option value="tablet">Tablet</option>
+		</select>
+	</tr>
+</div>
+<div>
+	<tr>Price:</tr><br>
+	<tr><input type="text" name="price" value="{{ data.price |number_format(2)}}"></tr>
+</div>
+<div>
+	<tr>Quantity:</tr><br>
+	<tr><input type="text" name="qty" value="{{ data.qty }}"></tr>
+</div>
+<input type="submit" value="Save"><a href="http://localhost/webpro2020/week10/612110172/slim/public/product">Cancel</a>

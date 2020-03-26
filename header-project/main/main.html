@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="main.css">
+    <title>Survive Covid</title>
+</head>
+
+<body>
+    <div>
+    <h1><img src="patient.png" width="250px" height="250px">Survive-Covid</h1>
+    <div class="reg">
+    <button style="float:right;" class="dropbtn">LOGOUT</button></div>
+    <div class="dropdown" style="float:right;">
+        <button class="dropbtn">INFORMATION<div class="triangle-down"></div></button>
+        <div class="dropdown-content">
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li> 
+        </ul>
+        </div>
+    </div>
+    <button style="float:right;" class="dropbtn">NEWS</button>
+    </div>
+    <div class="all-content">
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="covid1.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="covid2.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="covid3.jpg" style="width:100%">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+    </div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3500); // Change image every 2 seconds
+}
+</script>
+</body>
+
+</html>

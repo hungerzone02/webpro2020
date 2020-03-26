@@ -11,6 +11,7 @@ if(!$result)
 {
     die("Could not successfully run the query $userQuery ".mysqli_error($connect));
 }
+
 else
 {
     echo "Successfully to deleted the product<br><br>";

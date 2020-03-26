@@ -1,4 +1,5 @@
 <?PHP
+
 use Slim\Routing\RouteCollectorProxy;
 use App\Controller\ProductController;
 

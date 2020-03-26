@@ -17,3 +17,4 @@ else
     echo "successfully to $insertProductName"."\n";
     header("Location: ./display_product.php", true, 301);
 }
+

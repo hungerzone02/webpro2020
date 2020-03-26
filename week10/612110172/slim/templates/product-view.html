@@ -1,24 +1,33 @@
-{# extend main layout #}
-{% extends "layout.html" %}
-
-{# override title block #}
-{% block title %}Product View{% endblock %}
-
+{% block stylesheets %}
+	<link type="text/css" rel="stylesheet" href="http://localhost/webpro2020/week10/612110172/slim/public/css/product-view.css">
+{% endblock %}
 {# override header block and use contents from title block #}
 {% block header %}
-  <h1>{{ block('title') }}</h1>
+	<h1>Product View</h1>
 {% endblock %}
 {# override content block #}
-{% block content %} 
-  {% if data is empty %}
-  <p>Product not found!!!</p>
-  {% else %}
-  <p>
-    Name: {{ data.name }}<br />
-    Category: {{ data.category }}<br />
-    Price: {{ data.price|number_format(2) }}<br />
-    Quantity: {{ data.qty }}<br />
-  </p>
-  <a href="{{ url_for('product-list') }}">Back</a>
-  {% endif %}
+<body>
+{% block content %}
+	{% if data is empty %}
+		<p>Product not found!!!</p>
+	{% else %}
+  <div class="content">
+		<p>
+			<a href="{{ url_for('product-update' , {id: data.id}) }}" class="update">Update Product</a>
+			<a href="" class="delete">Delete Product</a> 
+      <a href="{{ url_for('product-list') }}" class="back"> &lt;Back</a>
+      </p>
+			<b>Name:</b>
+			{{ data.name }}<br/>
+			<b>Category:</b>
+			{{ data.category }}<br/>
+			<b>Price:</b>
+			{{ data.price|number_format(2) }}<br/>
+			<b>Quantity:</b>
+			{{ data.qty }}<br/>
+      
+      </div>
+	{% endif %}
+  
+</body>
 {% endblock %}

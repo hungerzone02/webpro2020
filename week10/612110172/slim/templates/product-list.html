@@ -8,22 +8,22 @@
 {% endblock %}
 {# override content block #}
 {% block content %}
-<a href="http://localhost/webpro2020/week10/612110172/slim/public/product/add">add product</a>
+<a href="http://localhost/webpro2020/week10/612110172/slim/public/product/add">Add Product</a>
 <table border="1">
-  <tr>
+  <tr class="column">
     <th>Name</th>
     <th>Categopry</th>
     <th>Price</th>
     <th>Quantity</th>
   </tr>
-  {% for item in data %}
+  {% for item in data %} <!-- แต่ว่าตรงนี้เราวน data ทีละตัว แล้วแต่ละตัวนั้นใส่ในตัวแปรชื่อ item เราก็เลยใช้ item -->
   <tr>
-    <td><a href="{{ url_for('product-view', {id: item.id}) }}">
+    <td class="product_name"><a href="{{ url_for('product-view', {id: item.id}) }}">
       {{ item.name }}
     </a></td>
     <td>{{ item.category }}</td>
     <td>{{  item.price |number_format(2)}}</td>
-    <td>{{ item.qty }}</td>   
+    <td>{{ item.qty }}</td>
   </tr>
   {% endfor %}
 </table>

@@ -23,3 +23,5 @@ else
     echo "Successfully  updated  the product<br><br>";
     header("Location: ./display_product.php", true, 301);
 }
+
+

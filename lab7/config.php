@@ -1,8 +1,10 @@
+
+ไฟล์ config.php
 <?php
 $server = "localhost";
 $user = "root";
 $password = "";
-$dbname = "612110172";
+$dbname = "ชื่อ Database";
 
 $connect = mysqli_connect($server,$user,$password,$dbname);
 
@@ -12,3 +14,11 @@ if(!$connect)
     using username $user (".mysqli_connect_errno().",".mysqli_connect_error().")");
 }
 ?>
+
+
+
+
+
+
+
+
