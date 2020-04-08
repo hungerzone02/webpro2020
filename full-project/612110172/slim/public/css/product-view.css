@@ -1,0 +1,33 @@
+b {
+    color: blue;
+    margin-bottom: 10px;
+    padding-bottom: 50px;
+}
+h1 {
+    color: blue;
+    margin-left: 300px;
+}
+.content {
+    border: black solid 1px;
+    font-size: 30px;
+    padding: 30px;
+    width: 800px;
+}
+.content b {
+    margin-right: 50px;
+    margin-left: 150px;
+}
+.update {
+    text-decoration: none;
+    color: greenyellow;
+}
+
+.delete {
+    text-decoration: none;
+    color: red;
+    margin-right: 300px;
+}
+
+.back {
+    text-decoration: none;
+}

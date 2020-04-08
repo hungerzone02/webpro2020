@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measure Form</title>
+    <link rel="stylesheet" href="http://localhost/webpro2020/full-project/612110172/slim/public/css/measure.css">
+</head>
+<body action="#" method="post">
+    <h1><img src="images/patient.png" width="250px" height="250px">Survive-Covid</h1>
+    <div class="reg">
+        <a href="{{url_for('login')}}"><button style="float:right;" class="dropbtn">LOGOUT</button></a></div>
+        
+        <div class="dropdown" style="float:right;">
+            <button class="dropbtn">INFORMATION<div class="triangle-down"></div></button>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="{{url_for('information')}}">Corona Information</a></li>
+                    <li><a href="{{url_for('sum')}}">Summarize Total</a></li> 
+            </ul>
+            </div>
+    
+        </div>
+        <a href="{{url_for('news')}}"><button style="float:right;" class="dropbtn">NEWS</button></a>
+        <a href="{{url_for('form')}}"><button style="float:right;" class="dropbtn">FORM</button></a>
+        <a href="{{url_for('home')}}"><button style="float:right;" class="dropbtn">HOME</button></a>
+        </div>
+    <button style="float:right;" class="dropbtn">NEWS</button>
+            <div class="age">
+            <b>Age</b><br>
+            <input type="text" name="age" placeholder="Age"><br>
+        </div>
+    </table>
+    <div class="symptom">
+        <form>
+            <div class="fever">
+        <b>Do you have fever?</b><br>
+        <b>Yes</b><input type="checkbox" name="yes" value="1">
+        <b>No</b><input type="checkbox" name="no" value="0"><br>
+        <img src="images/fever.png" alt="fever" width="200" height="200"><br>
+    </div>
+        <div class="cough">
+        <b>Do you have cough?</b><br>
+        <b>Yes</b><input type="checkbox" name="yes" value="1">
+        <b>No</b><input type="checkbox" name="no" value="0"><br>
+        <img src="images/cough.png" alt="cough" width="200" height="200"><br>
+    </div>
+    <div class="breath">
+        <b>Do you have shortness of breath?</b><br>
+        <b>Yes</b><input type="checkbox" name="yes" value="1">
+        <b>No</b><input type="checkbox" name="no" value="0"><br>
+        <img src="images/breath.png" alt="breath" width="200" height="200"><br>
+    </div>
+    <input type="submit"><a href="#">Cancel</a>
+    </form>
+    </div>
+</body>
+</html>

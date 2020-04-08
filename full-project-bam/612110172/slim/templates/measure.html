@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measure Form</title>
+    <link rel="stylesheet" href="{{base_path()}}\css\measure.css">
+</head>
+
+<body>
+    <h1>&times;Covid-19&times;</h1>
+    {% if _session.getFlash('message') is not empty %}
+            <div class="twig"><p>{{ _session.getFlash('message') }}</p></div>
+    {% endif %}
+    <form action="{{url_for('formAdd')}}" method="POST">
+    <div class="symptom">
+            <b>Age</b><br>
+            <input type="text" name="age" placeholder="Age"><br>
+            <b>Do you have fever?</b><br>
+            <b>Yes</b><input type="checkbox" name="fever" value="1">
+            <b>No</b><input type="checkbox" name="fever" value="0"><br>
+            <img src="{{base_path()}}\css\fever.png" alt="fever" width="200" height="200"><br>
+            <b>Do you have cough?</b><br>
+            <b>Yes</b><input type="checkbox" name="cough" value="1">
+            <b>No</b><input type="checkbox" name="cough" value="0"><br>
+            <img src="{{base_path()}}\css\cough.png" alt="cough" width="200" height="200"><br>
+            <b>Do you have shortness of breath?</b><br>
+            <b>Yes</b><input type="checkbox" name="breath" value="1">
+            <b>No</b><input type="checkbox" name="breath" value="0"><br>
+            <img src="{{base_path()}}\css\breath.png" alt="breath" width="200" height="200"><br>
+        
+        <input type="submit"><a href="{{url_for('home')}}">Cancel</a>
+    </div>
+</form>
+</body>
+
+</html>

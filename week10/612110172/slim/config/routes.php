@@ -29,4 +29,3 @@ $app->get('/product/{id}/update',
 $app->get('/login',
   ProductController::class.':loginAction'
 )->setName('product-login');
-

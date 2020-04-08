@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+.reg {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.reg form input{
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 300px;
+}
+
+.reg select {
+    width: 325px;
+    padding: 10px;
+}
+
+.reg option {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.reg h1 {
+    color: teal;
+    font-size: 80px;
+}
+
+.reg input[type=submit]{
+    width: 100px;
+    margin-right: 180px;
+    background-color: teal;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

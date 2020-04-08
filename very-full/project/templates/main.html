@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="{{base_path()}}/css/main.css">
+    <title>Survive Covid</title>
+</head>
+
+<body>
+    <div>
+    <h1><img src="{{base_path()}}/css/patient.png" width="250px" height="250px">Survive-Covid</h1>
+    <div class="reg">
+    <a href="{{url_for('login')}}"><button style="float:right;" class="dropbtn">LOGOUT</button></a></div>
+    
+    <div class="dropdown" style="float:right;">
+        <button class="dropbtn">INFORMATION<div class="triangle-down"></div></button>
+        <div class="dropdown-content">
+            <ul>
+                <li><a href="{{url_for('information')}}">Corona Information</a></li>
+                <li><a href="{{url_for('sum')}}">Summarize Total</a></li> 
+        </ul>
+        </div>
+
+    </div>
+    <a href="{{url_for('news')}}"><button style="float:right;" class="dropbtn">NEWS</button></a>
+    <a href="{{url_for('form')}}"><button style="float:right;" class="dropbtn">FORM</button></a>
+    <a href="{{url_for('home')}}"><button style="float:right;" class="dropbtn">HOME</button></a>
+    </div>
+
+    <div class="video">
+      <video width="960" height="720" autoplay muted loop>
+        <source src="{{base_path()}}/css/covid-video.mp4" type="video/mp4">
+        <b>Alert! Your browser does not support HTML5 video.</b>
+      </video>
+      <b>Video Credit:<a href="https://www.youtube.com/user/stanfordmedicine">Stanford Medicine</a></b>
+    </div>
+    <div class="show">
+    <b>Cases: {{ listSum.cases | number_format }}</b><br>
+
+    <b>Deaths: {{ listSum.wastes | number_format}}</b><br>
+
+    <b>Recovered: {{ listSum.deads | number_format}}</b><br>
+
+  </div>
+</body>
+
+</html>

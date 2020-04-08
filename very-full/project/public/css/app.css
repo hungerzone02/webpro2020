@@ -1,0 +1,121 @@
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+#header {
+  text-align: center;
+}
+
+#content {
+  padding: 8px;
+  border: 1px solid black;
+}
+
+#header,
+#content {
+  display: block;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.table-header {
+  background-color: gray;
+}
+
+.title {
+  text-align: center;
+  font-weight: 600;
+}
+
+.text-primary {
+  color: blue;
+  font-weight: 600;
+}
+
+.text-positive {
+  color: greenyellow;
+}
+
+.text-negative {
+  color: red;
+}
+
+.detail {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.action-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+table {
+  width: 100%;
+}
+
+table,
+td,
+th {
+  border-collapse: collapse;
+  text-align: right;
+}
+
+.bordered {
+  border: 1px solid black;
+}
+
+a {
+  display: block;
+  margin: 0.5rem 0;
+  margin-right: 0.5rem;
+  text-decoration: none;
+  color: blue;
+}
+
+input,
+select {
+  border-radius: 4px;
+  padding: 8px 8px;
+  border: 1px solid gray;
+  width: 100%;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+.input-item {
+  margin-bottom: 24px;
+}
+
+.number {
+  text-align: right;
+}
+
+.button {
+  padding: 4px 8px;
+  font-size: 18px;
+  border-radius: 8;
+  background-color: transparent;
+  border: 0 solid transparent;
+  cursor: pointer;
+}
+
+.primary {
+  background-color: blue;
+  color: white;
+  font-weight: 600;
+}
+
+label {
+  margin: 0;
+}

@@ -1,0 +1,75 @@
+
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+h1 {
+    background-color: #e9eaec;
+    margin: 0;
+    font-family: Anton;
+    font-weight: lighter;
+    font-size: 200px;
+    color: #e27589;
+    text-decoration: underline;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-image: url("images/header-background.png");
+    padding: 10px;
+    text-align: left;
+}
+
+img {
+    margin-right: 50px;
+}
+body {
+    margin: 0;
+    background-color: #b7dbf3;
+}
+
+.button {
+    float: right;
+    margin: 0;
+    border: none;
+    
+}
+
+.button a {
+    text-decoration: none;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.update {
+    color: blue;
+}
+
+.delete {
+    color: red;
+}
+
+button {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    padding: 10px 25px;
+    font-family: Anton;
+    font-size: 20px;
+    background-color: #b7dbf3;
+    cursor: pointer;
+}
+
+table {
+    border: black solid 2px;
+    border-radius: 10px;
+    font-family: Anton;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+}
+
+table th {
+    width: 150px;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+table td {
+    font-size: 22px;
+}

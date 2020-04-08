@@ -1,0 +1,47 @@
+html, body {
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  body {
+    font-family: sans-serif;
+  }
+  
+  #header {
+    text-align: center;
+  }
+  #content {
+    padding: 8px;
+    border: 1px solid black;
+  }
+  
+  #header, #content {
+    display: block;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+  
+  .column {
+    background-color: gray;
+  }
+
+  .product_name{
+    width: 500px;
+    text-align: center;
+  }
+  .product_name a{
+    font-weight: bolder;
+    color: blue;
+    text-decoration: none;
+  }
+
+td {
+    width: 150px;
+  }
+
+  a {
+    text-decoration: none;
+    color: blue;
+  }

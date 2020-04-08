@@ -1,0 +1,38 @@
+.login {
+    margin-top: 300px;
+    text-align: center;
+}
+
+.login h1 {
+    font-size: 80px;
+    color: teal;
+}
+
+.login input[type=submit]{
+    width: 100px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: teal;
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+}
+
+.login form input{
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 300px;
+}
+
+.login p {
+    font-size: 20px;
+}
+
+.login a {
+    font-size: 20px;
+    color: blue;
+    text-decoration: none;
+    margin-right: 10px;
+}

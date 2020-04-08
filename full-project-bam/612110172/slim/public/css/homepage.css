@@ -1,0 +1,153 @@
+
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+h1 {
+    background-color: #e9eaec;
+    margin: 0;
+    font-family: Anton;
+    font-weight: lighter;
+    font-size: 200px;
+    color: #e27589;
+    text-decoration: underline;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    padding: 10px;
+    text-align: left;
+}
+
+img {
+    margin-right: 50px;
+}
+body {
+    margin: 0;
+    background-color: #b7dbf3;
+}
+
+.button {
+    float: right;
+    margin: 0;
+    border: none;
+}
+
+button {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    padding: 10px 25px;
+    font-family: Anton;
+    font-size: 20px;
+    background-color: #b7dbf3;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.video {
+    margin-left: 10px;
+    padding-bottom: 0px;
+    float: left;
+}
+.video b {
+    font-family: Oswald;
+}
+
+
+.content {
+    margin-top: 150px;
+}
+
+.content b {
+    font-size: 70px;
+    color: black;
+    margin-left: 150px;
+}
+
+.reg {
+    margin-top: 200px;
+}
+
+                /*Information*/
+
+.main-content{
+    display: flex;
+    justify-content:center;
+    font-family: Anton;
+    text-decoration: underline;
+    background-color: #cccccc;
+    color: #000000;
+    border-bottom: 2px solid #fff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    
+}
+.a {
+    text-align: center;
+    color: #ffffff;
+    font-size: 30px;
+    font-family: Anton;
+    
+
+}
+.b {
+    padding: 10px;
+    font-size: 20px;
+    font-family: Helvetica;
+    background-color: #ffffff;
+    
+}
+.c {
+    padding: 10px;
+    font-size: 20px;
+    font-family: Helvetica;
+    background-color: #ffffff;
+}
+
+.Photos{
+    text-align: center;
+    padding: 10px;
+   
+   
+}
+.footer {
+    font-size: 20px;
+    text-align: center;
+    font-family: Helvetica;
+}
+
+           /* service */
+
+.d {
+    text-align: center;
+    color: #ffffff;
+    font-size: 30px;
+    font-family: Helvetic;
+    
+}
+.e {
+    text-align: center;
+    color: #ffffff;
+    font-size: 30px;
+    font-family: Helvetic;
+    
+}
+
+/* kill */
+
+.x {
+    padding: 10px;
+    text-align: center;
+    color: #0c0a0a;
+    font-size: 20px;
+    font-family: Helvetic;
+    
+}
+
+/* jel */
+.h{
+    text-align: center;
+    color: #0f0202;
+    font-size: 20px;
+    font-family: Helvetic;
+    background-color: #cccccc;
+}
+
+        

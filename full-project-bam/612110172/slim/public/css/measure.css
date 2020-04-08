@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+h1 {
+    text-decoration: underline;
+}
+body {
+    text-align: center;
+    font-family: Anton;
+    font-size: 25px;
+    background-color: cornflowerblue;
+}
+input{
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 300px;
+}
+
+select {
+    width: 325px;
+    padding: 10px;
+}
+
+input[type=checkbox] {
+    width: 30px;
+}
+
+input[type=submit] {
+    width: 100px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 70px;
+    font-family: Anton;
+    margin-top: 15px;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.twig p {
+    color: red;
+    font-size: 50px;
+}

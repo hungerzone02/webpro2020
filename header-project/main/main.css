@@ -14,6 +14,19 @@ body {
     margin: 0;
 }
 
+.video {
+    margin-left: 10px;
+    padding-bottom: 0px;
+}
+.video b {
+    font-family: Oswald;
+}
+
+p {
+    font-family: Oswald;
+    font-size: 20px;
+}
+
 /*----------------------------------- menu -----------------------------------*/
 .dropbtn {
     background-color: #6d9978;

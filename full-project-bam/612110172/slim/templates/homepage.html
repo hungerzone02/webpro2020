@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19</title>
+    <link type="text/css" rel="stylesheet" href="{{base_path()}}\css\homepage.css">
+</head>
+<body>
+    <h1>&times;Covid-19&times;</h1>
+    <div class="button">
+			<button><a href="{{url_for('home')}}">Home </a></button>
+			<button><a href="{{url_for('service')}}">Service </a></button>
+			<button><a href="{{url_for('information')}}">Information</a></button>
+      <button><a href="{{url_for('allCountryDetail')}}">All Country Detail</a></button>
+      <button><a href="{{url_for('form')}}">Make Measure Form</a></button>
+			<button><a href="{{url_for('login')}}">Logout</a></button>
+    </div>
+
+    <div class="video">
+        <video width="960" height="720" autoplay muted loop>
+          <source src="{{base_path()}}\css\covid-19.mp4" type="video/mp4">
+          <b>Alert! Your browser does not support HTML5 video.</b>
+        </video>
+        <b>Video Credit:<a href="https://www.youtube.com/user/HighImpactGraphics">High Impact</a></b>
+      </div>
+
+      <div class="content">
+        <b>Covid-19 Cases:</b><br>
+        <b>{{ listSum.cases | number_format }}</b><br>
+        <b>Deaths:</b><br>
+        <b>{{ listSum.wasted | number_format }}</b><br>
+        <b>Recovered:</b><br>
+        <b>{{ listSum.recovered | number_format }}</b><br>
+      </div>
+</body>
+</html>

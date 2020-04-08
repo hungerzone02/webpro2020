@@ -1,0 +1,20 @@
+{# extend main layout #}
+{% extends "layout.html" %}
+{# override title block #}
+{% block title %}Product List{% endblock %}
+{# override header block and use contents from title block #}
+{% block header %}
+<h1>{{ block('title') }}</h1>
+{% endblock %}
+{# product-list: page 1/2 #}
+
+{# override content block #}
+{% block content %}
+{% for item in data %}
+<a href="{{ url_for('product-view', {id: item.id}) }}">
+{{ item.name }}
+</a>
+<br />
+{% endfor %}
+{% endblock %}
+{# product-list: page 2/2 #}

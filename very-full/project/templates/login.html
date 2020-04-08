@@ -1,0 +1,37 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{base_path()}}/css/login.css">
+</head>
+<body>
+
+
+<div class="wrapper">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h2 class="active"> SIGN IN </h2>
+
+
+    <br><br>
+    {% if _session.getFlash('message') is not empty %}
+    <p>{{ _session.getFlash('message') }}</p>
+    {% endif %}
+    <!-- Login Form -->
+    <form action="{{url_for('login-process')}}" method="POST">
+      <input type="text" id="login" name="id" placeholder="username">
+      <input type="password" id="password" name="password" placeholder="password">
+
+      <br>
+      <input type="submit" value="Log In">
+      
+    </form>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <!-- Register -->
+    <div id="formFooter">
+      <a class="register" href="{{url_for('register-form')}}">register</a>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

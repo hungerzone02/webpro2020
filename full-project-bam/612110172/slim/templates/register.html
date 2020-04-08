@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link type="text/css" rel="stylesheet" href="{{base_path()}}\css\form.css">
+</head>
+<body>
+    <div class="reg">
+    <h1>Registration</h1>
+    <form action="{{url_for('register-add')}}" method="post">
+            <input type="text" name="id" placeholder="Username"><br>
+            <input type="password" name="password" placeholder="Password"><br>
+            <input type="text" name="fname" placeholder="First Name"><br>
+            <input type="text" name="lname" placeholder="Last Name"><br>
+            <input type="text" name="age" placeholder="Age"><br>
+            <input type="text" name="birth" placeholder="dd/mm/yyyy"><br>
+            <select name="gender">
+                <option value="" selected disabled hidden>Select your gender</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select><br>
+            <select name="blood">
+                <option value="" selected disabled hidden>Select your blood type</option>
+                <option value="a">A</option>
+                <option value="b">B</option>
+                <option value="o">O</option>
+                <option value="ab">AB</option>
+            </select><br>
+            <input type="text" name="email" placeholder="example@example.com"><br>
+            <input type="text" name="city" placeholder="Your Country"><br>
+            <input type="submit"><a href="{{url_for('login')}}"><b>Cancel</b></a>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="{{base_path()}}/css/header.css">
+    <title>Survive Covid</title>
+</head>
+
+<body>
+    <h1><img src="{{base_path()}}/css/patient.png" width="250px" height="250px">Survive-Covid</h1>
+    <div class="reg">
+        <a href="{{url_for('login')}}"><button style="float:right;" class="dropbtn">LOGOUT</button></a></div>
+        
+        <div class="dropdown" style="float:right;">
+            <button class="dropbtn">INFORMATION<div class="triangle-down"></div></button>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="{{url_for('information')}}">Corona Information</a></li>
+                    <li><a href="{{url_for('sum')}}">Summarize Total</a></li> 
+            </ul>
+            </div>
+    
+        </div>
+        <a href="{{url_for('news')}}"><button style="float:right;" class="dropbtn">NEWS</button></a>
+        <a href="{{url_for('form')}}"><button style="float:right;" class="dropbtn">FORM</button></a>
+        <a href="{{url_for('home')}}"><button style="float:right;" class="dropbtn">HOME</button></a>
+        </div>
+</body>
+ <div class="symptoms">
+        <h2> <br>Information Of Covid 19 </h2>
+    <h3>If you are experiencing COVID-19 symptoms (fever, cough, or shortness of breath), 
+        please call your doctor or medical facility before heading there.
+        The Macon County Health Department (MCHD) is working daily with our local health 
+        care partners and the Illinois Department of Public Health (IDPH) since we first 
+        became aware in December 2019 to respond to the constantly evolving novel coronavirus (COVID-19).
+        The MCHD follows the guidance and protocol provided by IDPH. 
+        In addition to working with IDPH in this preparedness effort, 
+        we are also collaborating with our community partners to be prepared for COVID-19 and other emergencies. 
+        As always, know that we are all working very hard to prepare our community. We ask that everyone please assist us. 
+        Community residents can take many steps to help prevent the spread of illness, 
+        including COVID-19.</h3>
+    <h3>The Illinois Department of Public Health, in coordination with the Illinois Poison Control Center,
+        have launched the Illinois COVID-19 Hotline and email address to answer questions Local Health Departments, 
+        clinicians, and the general public may have regarding COVID-19.</h3>
+    <h2> <br>Symptoms </h2>
+    <img src="{{base_path()}}/css/Symptoms.png" alt="symptoms" width="1000px">
+    <h2> <br> CDC Protects and Prepares Communities </h2>
+    <img src="{{base_path()}}/css/Protect.png" alt="Protect" width="1000px">
+    <h2> <br>Stop the Spread of Germs </h2>
+    <img src="{{base_path()}}/css/stop.png" alt="stop" width="1000px">
+    <h2>
+            <ul>
+                <li><a href="corona.html">Number Of Corona Patients</a></li>
+            </ul>
+    </h2>
+        
+        
+
+ </div>
+</html>
