@@ -208,36 +208,6 @@ class PageController
         return $view->render($response, 'jel.html');
     }
 
-    public function allCountryDetail(
-        Request $request,
-        Response $response,
-        $args
-    ): Response {
-
-        $link = $request->getAttribute('mysqli')->connect();
-        $view = Twig::fromRequest($request);
-        // Use product-view.html template
-        return $view->render($response, 'allCountryDetail.php',
-    [
-        'list' => PageController::getinfo($link)
-    ]);
-    }
-
-    public static function getinfo($link): array
-    {
-        $result = mysqli_query(
-            $link,
-            <<<EOT
-    SELECT * from information
-    EOT
-        );
-        $items = [];
-        while ($item = mysqli_fetch_assoc($result)) {
-            $items[] = $item;
-        }
-        return $items;
-    }
-
     public function form(
         Request $request,
         Response $response,
@@ -291,7 +261,6 @@ class PageController
         }
 
         $percentage = $_POST['fever'] + $_POST['cough'] + $_POST['breath'];
-
         $request->getAttribute('session')
         ->getSegment(self::class)
         ->setFlash('message', "You have a chance to be infected with Covid $percentage %");
@@ -303,14 +272,92 @@ class PageController
         )->withStatus(302);
     }
 
-    public static function dropCountry($link): ?array
+    public function allCountryDetail(
+        Request $request,
+        Response $response,
+        $args
+    ): Response {
+
+        $link = $request->getAttribute('mysqli')->connect();
+        $view = Twig::fromRequest($request);
+        // Use product-view.html template
+        return $view->render($response, 'allCountryDetail.html',
+    [
+        'list' => PageController::getinfo($link)
+    ]);
+    }
+
+    public static function getinfo($link): array
     {
         $result = mysqli_query(
             $link,
             <<<EOT
-            DELETE * FROM information where id = {{ list.Country }}
+    SELECT * from information
     EOT
-    );
-        return mysqli_fetch_assoc($result);
+        );
+        $items = [];
+        while ($item = mysqli_fetch_assoc($result)) {
+            $items[] = $item;
+        }
+        return $items;
+    }
+
+    public function dropCountry(
+        Request $request,
+        Response $response,
+        $args
+    ): Response {
+        $post = $request->getParsedBody();
+        $link = $request->getAttribute('mysqli')->connect();
+        $userQuery = "DELETE FROM information where id = {$_POST['id']}";
+        mysqli_query($link,$userQuery);
+        $view = Twig::fromRequest($request);
+        $routeContext = RouteContext::fromRequest($request);
+        return $response->withHeader(
+            'Location',
+            $routeContext->getRouteParser()->urlFor('allCountryDetail')
+        )->withStatus(302);
+    }
+
+    public function updateCountryAction(
+        Request $request,
+        Response $response,
+        $args
+    ): Response {
+        $link = $request->getAttribute('mysqli')->connect();
+        $post = $request->getParsedBody();
+        $view = Twig::fromRequest($request);
+        $result = mysqli_query(
+            $link,
+            <<<EOT
+    SELECT * from information where id = {$_POST['id']}
+    EOT
+        );
+        $item = mysqli_fetch_assoc($result);
+        return $view->render($response, 'update_country.html', [
+            'data' => $item
+        ]);
+    }
+
+    public function updateCountryProcess(
+        Request $request,
+        Response $response,
+        $args
+    ): Response {
+        $post = $request->getParsedBody();
+        $link = $request->getAttribute('mysqli')->connect();
+        $userQuery = "UPDATE information SET Country = '{$_POST['country']}',
+                                            addict = '{$_POST['addict']}',
+                                            waste = '{$_POST['waste']}',
+                                            hill = '{$_POST['recovered']}'
+        WHERE id = {$_POST['id']}";                 
+        mysqli_query($link,$userQuery);
+        $view = Twig::fromRequest($request);
+        $routeContext = RouteContext::fromRequest($request);
+        return $response->withHeader(
+            'Location',
+            $routeContext->getRouteParser()->urlFor('allCountryDetail')
+        )->withStatus(302);
     }
 }
+

@@ -59,9 +59,10 @@ table {
     border: black solid 2px;
     border-radius: 10px;
     font-family: Anton;
-    margin: auto;
-    margin-top: 100px;
+    margin-top: 0px;
     text-align: center;
+    float: left;
+    margin-right: 200px;
 }
 
 table th {
@@ -72,4 +73,43 @@ table th {
 
 table td {
     font-size: 22px;
+}
+
+.update {
+    margin-top: 200px;
+}
+.update b {
+    color: black;
+    font-family: Anton;
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.update input {
+    width: 200px;
+    height: 50px;
+    font-family: Anton;
+    font-size: 20px;
+    text-align: center;
+}
+
+.update b .free1 {
+    color: blue;
+}
+
+.update b .free2 {
+    color: red;
+}
+
+.update button {
+    border-radius: 10px;
+    background-color: #e9eaec;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.update button a {
+    color: black;
+    font-size: 20px;
+    font-family: Anton;
 }

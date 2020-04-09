@@ -9,11 +9,11 @@ use App\Controller\PageController;
  * that we use with url_for function in template.
  */
 $app->get(
-    '/',
+    '/login',
     PageController::class . ':login'
 )->setName('login');
 $app->post(
-    '/',
+    '/login',
     PageController::class . ':loginProcess'
 )->setName('login-process');
 
@@ -52,11 +52,6 @@ $app->get(
 )->setName('jel');
 
 $app->get(
-    '/allCountryDetail',
-    PageController::class . ':allCountryDetail'
-)->setName('allCountryDetail');
-
-$app->get(
     '/form',
     PageController::class . ':form'
 )->setName('form');
@@ -67,6 +62,21 @@ $app->post(
 )->setName('formAdd');
 
 $app->get(
-    '/CountryDetail',
+    '/allCountryDetail',
+    PageController::class . ':allCountryDetail'
+)->setName('allCountryDetail');
+
+$app->post(
+    '/allCountryDetail/dropCountry',
     PageController::class . ':dropCountry'
 )->setName('dropCountry');
+
+$app->post(
+    '/allCountryDetail/updateCountryProcess',
+    PageController::class . ':updateCountryProcess'
+)->setName('updateCountryProcess');
+
+$app->post(
+    '/updateCountry',
+    PageController::class . ':updateCountryAction'
+)->setName('updateCountryAction');

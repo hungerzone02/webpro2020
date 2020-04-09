@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Data</title>
+    <link type="text/css" rel="stylesheet" href="{{base_path()}}\css\update_country.css">
+</head>
+<body>
+    <form action="{{url_for('updateCountryProcess')}}" method="post">
+    <h1>Update Country Data</h1>
+    <input type="hidden" name="id" value="{{ data.id }}">
+    <b>Country:</b>
+    <input type="text" name="country" value="{{ data.Country }}"><br>
+    <b>Addict:</b>
+    <input type="text" name="addict" value="{{ data.addict }}"><br>
+    <b>Wasted:</b>
+    <input type="text" name="waste" value="{{ data.waste }}"><br>
+    <b>Recovered:</b>
+    <input type="text" name="recovered" value="{{ data.hill }}">
+    <input type="submit"><a href="{{url_for('allCountryDetail')}}">Cancel</a>
+</form>
+</body>
+</html>

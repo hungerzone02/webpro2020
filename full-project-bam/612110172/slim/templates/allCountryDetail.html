@@ -21,25 +21,39 @@
     <br>
     <table>
         <tr>
+            <th>ID</th>
             <th>Country</th>
             <th>Addict</th>
-            <th>Waste</th>
+            <th>Wasted</th>
             <th>Recovered</th>
-            <th>Update</th>
-            <th>Delete</th>
         </tr>
     {% for listCountry in list %}
         <tr>
+            <td>{{ listCountry.id }}</td>
             <td>{{ listCountry.Country }}</td>
             <td>{{ listCountry.addict | number_format }}</td>
             <td>{{ listCountry.waste | number_format }}</td>
             <td>{{ listCountry.hill | number_format }}</td>
-            <td><button><a href="#" class="update">Update</a></button></td>
-            <td><button><a href="{{url_for('dropCountry')}}" class="delete">Delete</a></button></td>
         </tr>
     {% endfor %}
-    </table>   
-    
+    </table>
+    <div class="update">
+        <b>Input ID of Country that you want to <b class="free1">Update</b></b>
+        <br>
+        <form action="{{url_for('updateCountryAction')}}" method="post">
+        <input type="text" name="id" placeholder="Country ID">
+        <br>
+        <input type="submit">
+        </form>
+        <br>
+        <b>Input ID of Country that you want to <b class="free2">Delete</b></b>
+        <br>
+        <form action="{{url_for('dropCountry')}}" method="post">
+        <input type="text" name="id" placeholder="Country ID">
+        <br>
+        <input type="submit">
+        </form>
+    </div>
 </body>
 
 </html>
