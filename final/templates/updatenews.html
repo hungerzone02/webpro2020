@@ -23,25 +23,25 @@
             </div>
     
         </div>
+        
         <a href="{{url_for('news')}}"><button style="float:right;" class="dropbtn">NEWS</button></a>
         <a href="{{url_for('form')}}"><button style="float:right;" class="dropbtn">FORM</button></a>
         <a href="{{url_for('home')}}"><button style="float:right;" class="dropbtn">HOME</button></a>
         </div>
-    <br>
-    <div class="list">
-        <table border="1">
+    <form action="{{url_for('updatenewspro')}}" method="POST">
+        <table>
+            <input type="hidden" name="ID" value="{{list.newsID}}">
             <tr>
-                <th>Description</th>
-                <th>Link</th>
+                <td>Description</td>
+                <td><input type="text" name="des" placeholder="{{list.description}}"></td>
             </tr>
-            {% for list in listnews %}
-            <tr> 
-                <td>{{ list.descriptions }}</td>
-                <td><a href="{{ list.url }}" target="_blank">LINK</a></td>
+            <tr>
+                <td>Url</td>
+                <td><input type="text" name="url" placeholder="{{list.url}}"></td>
             </tr>
-            {% endfor %}
         </table>
-    </div>
+        <input type="submit" value="Update">
+    </form>
     
 </body>
 

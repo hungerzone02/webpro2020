@@ -360,4 +360,3 @@ class PageController
         )->withStatus(302);
     }
 }
-

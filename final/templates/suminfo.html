@@ -46,8 +46,24 @@
             <td>{{ list.hill | number_format }}</td>
         </tr>
     {% endfor %}
-    </table>   
+    </table>
     </div>
+    <div class="form">
+        <b>Input ID of Country that you want to <b class="a1">Update</b></b>
+        <br>
+        <form action="{{url_for('updateCountryAction')}}" method="post">
+        <input type="text" name="Country" placeholder="Country name">
+        <br>
+        <input type="submit">
+        </form>
+        <br>
+        <b>Input ID of Country that you want to <b class="a2">Delete</b></b>
+        <br>
+        <form action="{{url_for('drop')}}" method="post">
+        <input type="text" name="Country" placeholder="Country name">
+        <br>
+        <input type="submit">
+        </form>
     
 </body>
 

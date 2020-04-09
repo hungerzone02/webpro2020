@@ -28,10 +28,11 @@ table {
     font-size: 30px;
     font-family: Oswald;
     border: black solid 3px;
+    float: left;
 }
 
 table th {
-    width: 300px;
+    width: 200px;
     background-color: #6d9978;
     color: white;
 }
@@ -142,4 +143,64 @@ h3{
     font-family: Oswald;
     font: size 300;
     margin: 0;
+}
+
+a{
+    color: rebeccapurple;
+    
+    text-decoration: none;
+  }
+
+  input[type=text] ,input[type="password"]{
+    background-color: #f6f6f6;
+    border: none;
+    color: #0d0d0d;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    width: 50%;
+    border: 2px solid #f6f6f6;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    
+  }
+
+   input[type=submit]{
+    background-color: #6aa19c;
+    border: none;
+    margin: 5px;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 5px 5px 5px 5px;
+    margin: 5px 20px 40px 20px;
+  }
+
+.form b{
+    font-size: 40px;
+    font-family: Oswald;
+}
+
+.form input {
+    width: 100px;
+    text-align: center;
+}
+
+.form input[type=submit] {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+}
+
+.a1 {
+    color: blue;
+}
+
+.a2 {
+    color: red;
 }

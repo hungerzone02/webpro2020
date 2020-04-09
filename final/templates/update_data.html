@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Data</title>
+    <link type="text/css" rel="stylesheet" href="{{base_path()}}\css\update_data.css">
+</head>
+
+<body>
+    <form action="{{url_for('updateCountrySubmit')}}" method="post">
+        <h1>Update Country Data</h1>
+        <table>
+            <tr>
+                <td><b>Country:</b></td>
+                <td><input type="text" name="country" value="{{ list.Country }}"></td>
+            </tr>
+            <tr>
+                <td><b>Addict:</b></td>
+                <td><input type="text" name="addict" value="{{ list.addict }}"></td>
+            </tr>
+            <tr>
+                <td><b>Wasted:</b></td>
+                <td><input type="text" name="waste" value="{{ list.waste }}"></td>
+            </tr>
+            <tr>
+                <td><b>Recovered:</b></td>
+                <td><input type="text" name="hill" value="{{ list.hill }}"><br></td>
+            </tr>
+            <tr>
+            <td><input type="submit"><a href="{{url_for('sum')}}">Cancel</a></td>
+        </tr>
+        </table>
+    </form>
+</body>
+
+</html>

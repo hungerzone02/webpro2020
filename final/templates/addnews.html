@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="{{base_path()}}/css/header.css">
+    <title>Survive Covid</title>
+</head>
+
+<body>
+    <h1><img src="{{base_path()}}/css/patient.png" width="250px" height="250px">Survive-Covid</h1>
+    <div class="reg">
+        <a href="{{url_for('login')}}"><button style="float:right;" class="dropbtn">LOGOUT</button></a></div>
+        
+        <div class="dropdown" style="float:right;">
+            <button class="dropbtn">INFORMATION<div class="triangle-down"></div></button>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="{{url_for('information')}}">Corona Information</a></li>
+                    <li><a href="{{url_for('sum')}}">Summarize Total</a></li> 
+            </ul>
+            </div>
+    
+        </div>
+        
+        <a href="{{url_for('news')}}"><button style="float:right;" class="dropbtn">NEWS</button></a>
+        <a href="{{url_for('form')}}"><button style="float:right;" class="dropbtn">FORM</button></a>
+        <a href="{{url_for('home')}}"><button style="float:right;" class="dropbtn">HOME</button></a>
+        </div>
+
+    <form action="{{url_for('addnewspro')}}" method="POST">
+        <table class="addnews">
+            <tr>
+                <td>Description</td>
+                <td><input type="text" name="des" placeholder="description"></td>
+            </tr>
+            <tr>
+                <td>Url</td>
+                <td><input type="text" name="url" placeholder="URL"></td>
+            </tr>
+        </table>
+        <input type="submit" value="Update">
+    </form>
+    
+</body>
+
+</html>
