@@ -275,7 +275,9 @@ class PageController
         $link = $request->getAttribute('mysqli')->connect();
         $view = Twig::fromRequest($request);
         // Use product-view.html template
-        return $view->render($response, 'register.html');
+        return $view->render($response, 'register.html', [
+            'blood' => PageController::getblood($link)
+        ]);
     }
 
     public function home(
@@ -290,6 +292,7 @@ class PageController
         return $view->render($response, 'main.html',
     [
         'listSum' => PageController::sum($link)
+        
     ]);
     }
 
@@ -456,5 +459,21 @@ class PageController
             'Location',
             $routeContext->getRouteParser()->urlFor('sum')
         )->withStatus(302);
+    }
+
+
+    public static function getblood($link): array
+    {
+        $result = mysqli_query(
+            $link,
+            <<<EOT
+    SELECT * from blood
+    EOT
+        );
+        $items = [];
+        while ($item = mysqli_fetch_assoc($result)) {
+            $items[] = $item;
+        }
+        return $items;
     }
 }

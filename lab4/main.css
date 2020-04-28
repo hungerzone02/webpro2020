@@ -60,6 +60,9 @@
     background-image: url(images/background.jpg);
 }
 
+
+
+
 .recipes {
     text-align: center;
     color: white;
@@ -72,6 +75,7 @@
     color: white;
 }
 
+
 .text ul {
     border: 1px solid red;
     padding-left: 0%;
@@ -81,6 +85,9 @@
     float: left;
     margin-right: 10px;
 }
+
+
+
 
 .form input[type=text] {
     width: 500px;

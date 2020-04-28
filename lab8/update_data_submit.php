@@ -18,14 +18,11 @@ $userQuery = "UPDATE travel SET Destination = '$Destination',
                                 TotalPrice = '$TotalPrice'
                         WHERE travel_id = '$travel_id '";
 
-$result = mysqli_query($connect,$userQuery);
+$result = mysqli_query($connect, $userQuery);
 
-if(!$result)
-{
-    die("Could not successfully run the query $userQuery ".mysqli_error($connect));
-}
-else
-{
+if (!$result) {
+    die("Could not successfully run the query $userQuery " . mysqli_error($connect));
+} else {
     echo "Successfully updated the travel information<br><br>";
     header("Location: ./display_report.php", true, 301);
 }

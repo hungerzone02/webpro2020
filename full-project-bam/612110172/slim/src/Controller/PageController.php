@@ -325,8 +325,8 @@ class PageController
         $args
     ): Response {
         $link = $request->getAttribute('mysqli')->connect();
-        $post = $request->getParsedBody();
         $view = Twig::fromRequest($request);
+        $post = $request->getParsedBody();
         $result = mysqli_query(
             $link,
             <<<EOT

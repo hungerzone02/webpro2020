@@ -4,6 +4,8 @@ require_once "config.php";
 $nations = $_GET['nations'];
 $traveler = $_GET['traveler'];
 $nights = $_GET['nights'];
+
+
 if($nations == "Barcelona")
 {
     $airFare = 875;
@@ -33,9 +35,24 @@ if($nations == "Tokyo" && $nights >=5)
 {
     $airFare -= 200;
 }
+
+
 $HotelPrice = $airFare*$traveler;
 $TicketPrice = $cost*$nights;
 $total = $HotelPrice + $TicketPrice;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 $userQuery = "INSERT INTO travel(Destination,NumberOfNights,NumberOfPeople,HotelPrice,TicketPrice,TotalPrice) 
 VALUES('$nations',$nights,$traveler,$HotelPrice,$TicketPrice,$total)";
@@ -47,7 +64,7 @@ if(!$result)
 }
 else
 {
-    echo "Successfully to deleted the product<br><br>";
+    echo "Successfully to add the data<br><br>";
     header("Location: ./display_report.php", true, 301);
 }
 
